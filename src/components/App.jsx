@@ -1,6 +1,5 @@
 
 import { Component } from 'react';
-import PropTypes from "prop-types";
 import { ContactList } from './ContactList/ContactList';
 import {Filter} from './Filter/Filter'
 import AddForm from './AddForm/AddForm';
@@ -28,7 +27,7 @@ class App extends Component {
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));}
-    
+    this.setState({ name:''});
   };
 
   handleFilter=(event)=>{
@@ -51,8 +50,6 @@ class App extends Component {
       contacts: prevState.contacts.filter(contact => contact.id !== data),
     }));
     
-
-   
 }
 
 
@@ -78,18 +75,6 @@ class App extends Component {
       </>
     );
   }
-}
-
-App.propTypes = {
-  addContact: PropTypes.func,
-  handleFilter: PropTypes.func,
-  renderContacts: PropTypes.func,
-  deleteContact: PropTypes.func,
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    }).isRequired,
-  )
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import css from './ContactItem.module.css'
+import PropTypes from 'prop-types';
 
 export const ContactItem = ({name, number, itemKey, deleteContact})=>{
     return (
@@ -8,3 +9,11 @@ export const ContactItem = ({name, number, itemKey, deleteContact})=>{
     </>
 )
 }
+
+
+ContactItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    number: PropTypes.number.isRequired,
+    itemKey: PropTypes.string.isRequired,
+    deleteContact: PropTypes.func.isRequired,
+ }

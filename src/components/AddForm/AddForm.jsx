@@ -66,7 +66,4 @@ export default AddForm;
 
 AddForm.propTypes = {
   addContact: PropTypes.func,
-  submitHandler: PropTypes.func,
-  handleChange: PropTypes.func,
-  
 }
