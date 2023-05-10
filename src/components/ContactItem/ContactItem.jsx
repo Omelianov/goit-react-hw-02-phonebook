@@ -13,7 +13,7 @@ export const ContactItem = ({name, number, itemKey, deleteContact})=>{
 
 ContactItem.propTypes = {
     name: PropTypes.string.isRequired,
-    number: PropTypes.number.isRequired,
+    number: PropTypes.string.isRequired,
     itemKey: PropTypes.string.isRequired,
     deleteContact: PropTypes.func.isRequired,
  }

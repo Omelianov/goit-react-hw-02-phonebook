@@ -11,7 +11,7 @@ export const ContactList = ({ contactList, deleteContact }) => {
           <li key={a.id}>
             <ContactItem
               name={a.name}
-              number={a.number}
+              number={String(a.number)}
               itemKey={a.id}
               deleteContact={deleteContact}
             />

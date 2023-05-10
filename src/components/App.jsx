@@ -58,7 +58,11 @@ class App extends Component {
     return (
       <><div className={css.container}>
         <h1 className={css.title}>Phonebook</h1>
-        <AddForm  contacts={contacts}  addContact={this.addContact} handleChange={this.handleChange}/>
+        <AddForm  contacts={contacts}
+        addContact={this.addContact}
+        name={this.state.name}
+        number={this.state.number} 
+        handleChange={this.handleChange}/>
       
         
         <h2 className={css.contacts}>Contacts</h2>
