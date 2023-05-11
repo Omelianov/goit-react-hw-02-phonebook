@@ -26,7 +26,7 @@ class AddForm extends Component {
 
   
   render() {
-    const {name, number} = this.state
+    
     return (
       <form className={css.form} onSubmit={this.submitHandler}>
         <label className={css.label}>
