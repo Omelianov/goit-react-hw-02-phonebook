@@ -16,7 +16,6 @@ class App extends Component {
   };
 
 
-
   addContact = newContact => {
     const findContact = this.state.contacts.find(contact => contact.name.toLocaleLowerCase() === newContact.name.toLocaleLowerCase()) 
     if (findContact){
